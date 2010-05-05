@@ -1,0 +1,13 @@
+{
+    "name": "Surusu Enhancements",
+    "version":"0.1",
+    "description":"Enhances surusu a bit.",
+    "page_action":{
+        "default_icon":"icon.png"
+    }, 
+    "content_scripts":[
+        {
+            "matches":["http://surusu.com/addqaui.php"],
+            "js":["jquery.js","surusu.js"]
+        }]
+}
