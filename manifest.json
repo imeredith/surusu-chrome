@@ -8,6 +8,7 @@
     "content_scripts":[
         {
             "matches":["http://surusu.com/addqaui.php"],
-            "js":["jquery.js","surusu.js"]
+            "js":["jquery.js","surusu.js"],
+            "run_at":"document_end"
         }]
 }
