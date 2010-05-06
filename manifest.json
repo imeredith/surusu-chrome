@@ -5,10 +5,17 @@
     "page_action":{
         "default_icon":"icon.png"
     }, 
-    "content_scripts":[
-        {
+    "content_scripts":[{
             "matches":["http://surusu.com/addqaui.php"],
-            "js":["jquery.js","surusu.js"],
+            "js":["jquery.js","addqaui.js"],
+            "run_at":"document_end"
+        },{
+            "matches":["http://surusu.com/question.php"],
+            "js":["jquery.js","question.js"],
+            "run_at":"document_end"
+        },{
+            "matches":["http://surusu.com/answer.php"],
+            "js":["jquery.js","answer.js"],
             "run_at":"document_end"
         }]
 }
