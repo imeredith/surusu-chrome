@@ -1,6 +1,6 @@
 {
     "name": "Surusu Enhancements",
-    "version":"0.1",
+    "version":"0.11",
     "description":"Enhances surusu a bit.",
     "page_action":{
         "default_icon":"icon.png"
