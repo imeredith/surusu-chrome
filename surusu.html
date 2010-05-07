@@ -1,0 +1,37 @@
+<html>
+	<head>
+	<script src="jquery.js"/>
+	</head>
+	<body>
+		<div id="doStuff">
+			<form>
+				<label for="front">Front</label>
+				<textarea name="question" cols="45" rows="4" id="front"></textarea><br/>
+				<label for="back">Back</label>
+				<textarea name="answer" cols="45" rows="4" id="back"></textarea><br/>
+				<label for="deck">Deck</label>
+				<input type="input" id="deck"/><br/>
+			</form>
+			<button id='addCard'>Add</button><br/>
+			<div id='feedback'></div>
+		</div>
+		<script>
+			$('#addCard').click(function(){
+				$('#feedback').text("Adding Card...");
+				var data = {
+					additem:"KwikAdd",
+					answer:$('#back').val(),
+					question:$('#front').val(),
+					selecteddeck:$('#deck').val()
+					
+				};
+				chrome.extension.sendRequest(data, function(response){
+					$('#back').val("");
+					$('#front').val("");
+					$('#feedback').text("Added Card");
+				});	
+			});
+			
+		</script>
+	</body>
+</html>

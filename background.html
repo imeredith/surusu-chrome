@@ -1,0 +1,18 @@
+<html>
+	<script src="jquery.js"/>
+	<script>
+		chrome.extension.onRequest.addListener(
+			function(request, sender, sendResponse){
+				if(request.additem){
+					addCard(request, sendResponse);
+					return;
+				}				
+			});
+			
+			function addCard(data, sendResponse){
+				$.post("http://surusu.com/addqaproc.php", data, function(data){
+					sendResponse({result:data});
+				});
+			}
+	</script>
+</html>

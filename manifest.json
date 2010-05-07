@@ -1,10 +1,18 @@
 {
     "name": "Surusu Enhancements",
-    "version":"0.11",
-    "description":"Enhances surusu a bit.",
-    "page_action":{
-        "default_icon":"icon.png"
-    }, 
+    "version":"0.12",
+    "description":"Surusu UI enhancements + add item form.",
+    "background_page":"background.html",
+    "icons":{"32":"ajatt32.png",
+            "48":"ajatt48.png",
+            "128":"ajatt128.png"
+    },
+    "browser_action":{
+        "default_icon":"ajatt48.png",
+        "default_popup":"surusu.html"
+    }, "permissions": [
+        "http://surusu.com/*"
+    ],
     "content_scripts":[{
             "matches":["http://surusu.com/addqaui.php"],
             "js":["jquery.js","addqaui.js"],
