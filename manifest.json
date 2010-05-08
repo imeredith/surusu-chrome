@@ -1,6 +1,6 @@
 {
     "name": "Surusu Enhancements",
-    "version":"0.12",
+    "version":"0.20",
     "description":"Surusu UI enhancements + add item form.",
     "background_page":"background.html",
     "icons":{"32":"ajatt32.png",
@@ -11,18 +11,18 @@
         "default_icon":"ajatt48.png",
         "default_popup":"surusu.html"
     }, "permissions": [
-        "http://surusu.com/*"
+        "http://*.surusu.com/*"
     ],
     "content_scripts":[{
-            "matches":["http://surusu.com/addqaui.php"],
+            "matches":["http://*.surusu.com/addqaui.php"],
             "js":["jquery.js","addqaui.js"],
             "run_at":"document_end"
         },{
-            "matches":["http://surusu.com/question.php"],
+            "matches":["http://*.surusu.com/question.php"],
             "js":["jquery.js","question.js"],
             "run_at":"document_end"
         },{
-            "matches":["http://surusu.com/answer.php"],
+            "matches":["http://*.surusu.com/answer.php"],
             "js":["jquery.js","answer.js"],
             "run_at":"document_end"
         }]
